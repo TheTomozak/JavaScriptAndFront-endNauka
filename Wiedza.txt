@@ -1,0 +1,3 @@
+Node js: środowkisko uruchomieniowe JavaScriptu (jest to silnik interpretujacy js, wyjęty z Chrome'a(V8)
+
+NPM(Node Package Manager): zarządca pakietów, instalowwany razem z Nodem, największe na świecie repozytorium bibliotek

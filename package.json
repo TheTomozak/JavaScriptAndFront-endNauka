@@ -1,0 +1,19 @@
+{
+  "name": "javascriptandfront-endnauka",
+  "version": "1.0.0",
+  "description": "Nauka JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTomozak/JavaScriptAndFront-endNauka.git"
+  },
+  "author": "TheTomozak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheTomozak/JavaScriptAndFront-endNauka/issues"
+  },
+  "homepage": "https://github.com/TheTomozak/JavaScriptAndFront-endNauka#readme"
+}
