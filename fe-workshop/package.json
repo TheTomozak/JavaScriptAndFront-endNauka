@@ -1,10 +1,11 @@
 {
   "name": "javascriptandfront-endnauka",
   "version": "1.0.0",
-  "description": "Nauka JavaScript",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node dist/main.js",
+    "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/TheTomozak/JavaScriptAndFront-endNauka/issues"
   },
-  "homepage": "https://github.com/TheTomozak/JavaScriptAndFront-endNauka#readme"
+  "homepage": "https://github.com/TheTomozak/JavaScriptAndFront-endNauka#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
 }
