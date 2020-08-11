@@ -1,3 +1,4 @@
 
-const userInfo = require('./user');
-console.log(userInfo);
+import {user} from "./user";
+
+console.log(user.avatar_url);
