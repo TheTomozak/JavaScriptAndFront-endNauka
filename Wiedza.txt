@@ -14,8 +14,33 @@ Node.js = umożliwiło nowe instrukcje jak środowkisko uruchomieniowe
 module.export = możliwosć podania rzeczy dostepnych "na zewnątrz pliku"
 require = odwołanie się do rzeczy z innego pliku 
 
+Moduły ES6: https://developer.mozilla.org/pl/
+-JavaScriptowe podejście do modularyzacji
+-export = wystawianie funkcji/obietków
+	--często umieszczane wprost przy deklaracji np:
+	"export calss Test {...}"
+	--jedna rzecz na plik może być wwyeksportowana domyślnie
+-import = wciągniecie 
+	--Wymaga podania nazwy importowanych rzeczy (w {} )
+	--Import domyślengo eksportu = podanie dowalonej nazwy, brak {} 
+	
+
 Webpack:
-Pozwala połączyć różne pliki JS, CSS, obrazkowe w jeden/kilka plików wynikowych
-Idealny do zmiany plików JS, używających importów i exportów w 1 plik 
-Taki maven assembly plugin
-#0CJS - 0 configuration javaScript
+{
+	Pozwala połączyć różne pliki JS, CSS, obrazkowe w jeden/kilka plików wynikowych
+	Idealny do zmiany plików JS, używających importów i exportów w 1 plik 
+	Taki maven assembly plugin
+	#0CJS - 0 configuration javaScript
+
+	Pluginy webpacka:
+	-Analizuje imprty/exporty i tworzy odpowiedni plik wynikowy
+	-Jednak już "tryb produkcji" robi coś ponad to - minifikacja(wszytkie spacje, entery są pousuwane z wynikowego kodu),
+	maglowanie(nazyw zmiennych są zamieniane na literki) itp.
+	
+	Dociąganie pluginów:
+	1.Znalezienie odpowiedniego plugina: Najczęsciej szukać na https://webpack.js.org/
+	2. npm i -D znaleziony_plugin
+	3.Dodanie plugina do konfiguracji webpaca 
+}
+
+
