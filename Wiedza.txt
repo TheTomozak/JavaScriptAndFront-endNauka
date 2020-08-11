@@ -1,3 +1,15 @@
 Node js: środowkisko uruchomieniowe JavaScriptu (jest to silnik interpretujacy js, wyjęty z Chrome'a(V8)
 
 NPM(Node Package Manager): zarządca pakietów, instalowwany razem z Nodem, największe na świecie repozytorium bibliotek
+
+ESLint : Taki Checkstyle z Javy, Zautomatyzowana statyczna analiza kodu 
+
+Modularyzacja: podział aplikacji JS na mniejsze, reużyawlne kawałki 
+Moduły z node_modules = biblioteki/frameworki, mogące się składać z wielu modułów Node'a lub ES6(~dociągnięte zależnosci mavenowe)
+
+Unpkg = odwrotność NPM, dobre do prototypowwnia, podpięcia jakiejś biblioteki "na próbę"
+
+Moduły - node: 
+Node.js = umożliwiło nowe instrukcje jak środowkisko uruchomieniowe
+module.export = możliwosć podania rzeczy dostepnych "na zewnątrz pliku"
+require = odwołanie się do rzeczy z innego pliku 
