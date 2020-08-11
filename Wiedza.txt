@@ -13,3 +13,9 @@ Moduły - node:
 Node.js = umożliwiło nowe instrukcje jak środowkisko uruchomieniowe
 module.export = możliwosć podania rzeczy dostepnych "na zewnątrz pliku"
 require = odwołanie się do rzeczy z innego pliku 
+
+Webpack:
+Pozwala połączyć różne pliki JS, CSS, obrazkowe w jeden/kilka plików wynikowych
+Idealny do zmiany plików JS, używających importów i exportów w 1 plik 
+Taki maven assembly plugin
+#0CJS - 0 configuration javaScript
