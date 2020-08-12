@@ -44,13 +44,20 @@ Webpack:
 }
 
 
-MOCHA:
-https://mochajs.org/
-W praktyce najbardziej poplurane rozwiaznie do testów
-Pozostałe opcje: Jasmine, Jest
-Runner + frameworki
-Brak wsparcia do asercji : Popularana opcja = Chai
-Brak wsparcia do szpiegowania : Popularana opcja = Sinon
+/////MOCHA:(nie aktualne za bardzo                            /////
+/////https://mochajs.org/                                     /////
+/////W praktyce najbardziej poplurane rozwiaznie do testów    /////
+/////Pozostałe opcje: Jasmine, Jest                           /////
+/////Runner + frameworki                                      /////
+/////Brak wsparcia do asercji : Popularana opcja = Chai       /////
+/////Brak wsparcia do szpiegowania : Popularana opcja = Sinon /////
+
+
+	JEST: Testy
+	Aktulanie przodujące na rynku 
+	https://jestjs.io/docs/en/getting-started.html
+	
+
 
 
 
