@@ -1,0 +1,95 @@
+Template literals: używanie takich ciapek ```` umożliwia osadzanie obiektu w stringu 
+{	let a = 5;
+	let b = 10;
+	console.log(`Fifteen is ${a + b} and
+	not ${2 * a + b}.`);
+	// "Fifteen is 15 and
+	// not 20."
+}
+
+W js jak coś nie istnieje to jest undefined, jak jest nullem to świadomie definujemy jako coś pustego
+w js wiele rzeczy jest fałszywymi wartościami : null, undefined, empty string, 0, false
+	
+$$$$$$$$$$ Destrukturyzacja $$$$$$$$$$$$
+
+Podwójny znak równości igoruje typ ==:
+2 == '2' dało by true 
+Potrójny znak równości patrzy i na wartosć i na typ ===:
+2 === '2' dało by false
+
+
+{
+let a = 1;
+let b = 2;
+
+//Można zrobić po staremu 
+const tmp = b;
+b = a;
+a = tmp;
+
+//Można to zrobić prościej za pomocą destrukturyzacji
+[a,b]=[b,a] //dopasowanie strukturalne czyli to wartosci po lewej stronie maja byc takie same jak po prawej stronie 
+
+
+alert (a === 2 && b === 1) // chcemy zrobić żeby to była prawda 
+}
+
+
+
+//==========================================================
+//Destrukturyzacja na tablicach
+
+
+let [a, b, c] = [1, 2, 3, 4, 5]; 	//przypisze do a = 1, b =2 , c =3
+
+const arr = [1, 2, 3, 4, 5]; 
+let spreadArr = [];
+[a,,b, ...spreadArr] = arr;	 //u nas spread wpakuje całą resztę z arr do spreadArr
+
+//wiec a = 1, b = 3, spreadArr = [4 ,5]
+
+//"..." Składnia rozwinięcia (ang. spread syntax) pozwala na rozwinięcie iterowalnego wyrażenia,
+//takiego jak wyrażenie tablicowe lub ciąg znaków, tam gdzie oczekiwanych jest zero lub więcej argumentów (dla wywołań funkcji) lub elementów (dla literałów tablicowych).
+//Pozwala również na rozwinięcie wyrażeń obiektowych w miejscach, gdzie oczekiwanych jest zero lub więcej par klucz-wartość (dla literałów obiektowych).
+
+//==========================================================
+//Destrukturyzacja na obiektach
+
+const book = {
+    name: 'Wiedźmin',
+    author: 'Sapkowski'
+};
+
+const city = {
+    name: 'Lublin',
+    country: 'Poland'
+}
+
+introduce(book);
+introduce(city);
+
+function introduce(obj) {
+    if(obj && obj.name) { 		//dzięki temu upewaniam się że obiekt istnieje 
+        alert(`To jest ${obj.name} i jest bardzo fajny.`);
+    }
+}
+
+destrukturyzując mozemy zapisać :
+function introduce({name: n = 'domyślna wartość jak będzie niezdefiniowane') = {} {
+    if(obj && obj.name) { 		//dzięki temu upewaniam się że obiekt istnieje 
+        alert(`To jest ${obj.name} i jest bardzo fajny.`);
+    }
+}
+
+destrukturyzując mozemy zapisać też w taki sposób uwzględniajać nulla :
+function introduce(obj) {
+    if(!obj ) {obj = {}) //podstawiamy domyślną wartość że obiekt przyjmuje wartośc pustego obiektu 
+	const{name: n = 'domyślna wartość jak będzie niezdefiniowane')} = obj;
+    alert(`To jest ${obj.name} i jest bardzo fajny.`);
+    
+}
+
+alert([...'👨‍👩‍👧‍👦']); za pomocą spread'a rozdzieli nam emoji rodziny na poszczegolne emoji 
+
+
+
