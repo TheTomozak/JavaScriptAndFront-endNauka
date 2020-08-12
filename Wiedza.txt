@@ -57,6 +57,15 @@ Webpack:
 	Aktulanie przodujące na rynku 
 	https://jestjs.io/docs/en/getting-started.html
 	
+ES6(ES2015)
+-Ogromny skok JS-a, 4 lata od ES5.1 dodano m.in.
+	#klasy, generatory, moduły, Promise,
+	#domyślne parametry, spread, destrukturyzację,
+	#nowe deklarowanie zmiennych, Map, Set
+	#...
+	
+ES6+: co roku postawje mniejsza wersja ES2015
+https://caniuse.com/	
 
 
 
