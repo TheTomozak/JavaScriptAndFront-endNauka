@@ -1,0 +1,189 @@
+	Typy danych:
+	Number np. let a = 3.14;, let b = 2;
+	String np, let name = 'Tomek'; let literka = "b", let backtick = `Tomek, lat ${20+1}`;
+	Boolean np. let isEasy = true; 
+	null np. let name = null; 
+	undefined np
+	{ 	let name;
+		console.log(name);
+	}
+	Object np. let person = {
+		name: "Kamil",
+		age: 32
+		};
+	Symbol np. let id = Symbol("id")	
+	
+
+	JAK DZIAŁA VAR?
+	{
+
+		alert(test);
+		if(true) {
+			var test = 'foo';
+		}
+		alert(test);
+		
+		z pirewszego alerta wypiszy undefined 
+		z drugiego alerta wypisze foo ponieważ kiedy jest var to JS tworzy wszytkie 
+		zmienne na samej górze kodu, czlyi po odpaleniu "var test " skacze przed pierwszym 
+		alertem i dlatego tak się dzieje 
+		NIE używaż var tylko używać:
+		const = 
+		let = 
+	}
+	
+	NIESKOŃCZOŃOŚC:
+	1/0 = Infinity
+	-1/0 = -Infinity
+	
+	NaN(Not-A-Number):
+	Dostajemy kiedy wykonujemy działa które nie ma sensu z matematycznego punktu widzenia
+	('siemka'/2) da nam NaN
+	
+	PROMPT:
+	result = window.prompt(text,value);
+	//result jest łańcuchem znaków, który zawiera tekst wprowadzony przez użytkownika lub wartość null.
+	//text jest łańcuchem znaków określającym tekst, jaki ma zostać wyświetlony użytkownikowi
+	//value jest łańcuchem znaków zawierającym domyślną wartość w polu wprowadzania tekstu (input). Jest to opcjonalny parametr.
+	
+	BACKTICK "````````":
+	Umożliwia nam wpisywanie w stringa wartosci innych zmiennych 
+	`Cos tam Cos tam ${3+3} tralala`
+	
+	OBJECT:
+	{
+		można stworzyć na dwa sposoby
+		1.
+			let person = new Object();
+			person.age = 21;
+			person.name = 'Tomek';
+			
+		2.
+		
+			let person2 ={
+				name: 'Tomek',
+				age: 21
+				};
+	}
+	
+	
+	Instrukcja Break i Continue:
+	break wychodzi z pętli 
+	continue przerywa aktulane wywołanie pętli i przechodzi do kolejnego wywołania 
+	
+	FUNKCJE:
+	
+		function hello(){		//void z javy
+		console.log("Hello");
+		}
+		
+		function sum(firstNum, secondNum){	//void z parametrami 
+		console.log(firstNum + secondNum);
+		}
+		
+		function subtraction(firstNum, secondNum){	//int, double, long, float z javy 
+		return firstNum - secondNum;				//wtedy kiedy piszemy return funkcja robi się zwracająca
+		{
+		
+		let sum = (firstNum, secondNum) => console.log(firstNum + secondNum);
+		
+		let sum = (firstNum, secondNum) => {
+		console.log('Dodajemy');
+		console.log(firstNum + secondNum);
+		}
+		
+		let square = a => console.log(a*a);
+		to samo co let square = (a) => console.log(a*a);
+		
+		let hello = () => console.log('Hello');	//funkcja bez parametru 
+		
+		
+	FOR:
+		for (let i =0; i< 10; i++){
+		console.log(i);
+		};
+		
+	FOR OF:
+	
+		for (let nazwaJakaChcemy of tablicaJakaMamy){
+			console.log(nazwaJakaChcemy);
+			}
+	
+		
+	TABLICE:
+	
+	let names = new Array();
+	lub
+	let names = [1, 2, 3, 4, 5];
+	
+	wyświetlanie console.log(names[0]);
+	
+	names.push(-34); //push dodaje element na końcu tablicy
+	names.unshift(666); // unshift dodaje element na początku tablicy 
+	
+	names.pop(); // pobiera ostatni element z tablicy i usuwa go
+	names.shift(); //pobiera pierwszy element z tablicy i usuwa go
+	
+	names.splice(2, 1); //usuniecie konkretego elementu z tablicy splice(index od któego chcemy zacząc, ile elementów chcemy usunąc)
+	//tym usunelibyśmy element na indexie 2 czyli 3
+	
+	
+	MAPA:
+	klucz->wartos
+	let products = new Map();
+	products.set(1, 'Marchew');
+	products.set(2, 'Mleko');
+	
+	products.delete(2); 
+	
+	products.has(2); //sprwadzamy czy klucz istnieje 
+	
+	console.log(products.get(1));
+	
+	wypisanie kluczy:
+		for(let key of products.keys()){
+		console.log(key);
+		}
+	
+	wypisanie wartosći:
+		for (let value of products.values()){
+		console.log(value);
+		}
+		
+	wypisanie pary klucz->wartosc:
+		for (let entry of products.entries()){
+		console.log(entry);
+		}
+		
+		
+	SET: w secie wartosci nie mogą się powtarzać 
+	
+	let names = new Set();
+	
+	names.add('Tomek');
+	names.add('Karol');
+	names.add('Karol');	// to w secie dalej będzie tylko jeden karol
+	
+	names.delete('Karol');
+	products.has('Karol');
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
