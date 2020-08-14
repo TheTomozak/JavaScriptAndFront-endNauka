@@ -1,0 +1,15 @@
+JS jest jednowątkowy
+
+Event loop:
+
+kiedy używamy setTimeout(function (){	setTimeout taki jak w jave thred.sleep
+		co ma się dziać
+	}, przez ile milisekund);
+	
+	np setTimeout(function(){
+		alert("cos");},1000);
+		
+		
+	to:
+	ze stosu wywołań -przechodzi-> to event maganera -przechodzi-> do kolejki i tak kolejka w pętli oczekuje na pusty stos -
+	-przechodzi-> jeżeli stos jest pusty to dodaje i z tego stosu się wykonuje 
