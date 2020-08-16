@@ -1,7 +1,5 @@
-import { user } from './user';
+import initAboutMe from './about-me/index'
 
-console.log(user.avatar_url);
-
-
+initAboutMe();
 
 
