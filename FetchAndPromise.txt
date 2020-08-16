@@ -47,3 +47,24 @@ fetch + promise:	http://kursjs.pl/kurs/ajax/fetch.php
 .catch(console.warn);
 
 }
+
+async, await:
+
+{
+	alert(getJoke());	//object Promise
+
+	async function getJoke() { //async function zwraca nam obietnice(Promise)	
+	//funkcja robi pod spodem fetcha
+		const response = await fetch(	//await owija/opakowuje nam Promise który jest zwarany z fetcha,wartosć z tego Promise zamiast wołać "then'nem"
+										//przyipusje nam to zmiennej(pod spodem dalej są to then'ny ale zapis jest bardziej przejrzysty)
+			'https://official-joke-api.appspot.com/random_joke'
+		);
+
+		if(!response.ok) {	//zamiast tego try,catch
+			throw new Error('Response status not 200');
+		}
+
+		console.log(await response.json());	//awaitów mozemy mieć dużo 
+}
+
+}
