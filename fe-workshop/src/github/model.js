@@ -12,7 +12,7 @@
 //module.exports = map;
 
 
-class GitHubUser {
+export class GitHubUser {
 
 
     constructor({avatar_url: img = '', bio = 'Cannot get biography'} = {}) {
@@ -27,7 +27,6 @@ class GitHubUser {
     }
 }
 
-module.exports = GitHubUser;
 
 
 
