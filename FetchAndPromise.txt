@@ -1,0 +1,49 @@
+
+FETCH:
+{
+
+	console.log(
+		fetch('https://official-joke-api.appspot.com/random_joke')
+	);
+	Klient HTTP, nowe API przeglądarek do odpytywania
+	Działa z Promise
+}
+
+PROMISE:
+{
+	Taki CompletableFuture z Javy
+	Następstwo callbacków
+	
+	Promise.all([
+		Promise.resolve(66),
+		new Promise((resolve, reject) => {
+			alert('action!');
+			resolve(-54);
+		}),
+		new Promise((resolve, reject) => {
+			setTimeout(resolve, 500, '666');
+		})
+	]).then(r => {
+		alert(r);
+		return 'hardcoded';
+	}).then(console.log);
+
+
+}
+
+
+fetch + promise:	http://kursjs.pl/kurs/ajax/fetch.php
+
+{
+	fetch('https://official-joke-api.appspot.com/random_joke')	//https://github.com/15Dkatz/official_joke_api
+.then((response) => {
+    if(!response.ok) {
+        throw new Error('Response status not 200');
+    }
+    return response.json();
+})
+.then(response=>{console.log(response)})
+// just for the demo purposes
+.catch(console.warn);
+
+}
