@@ -15,8 +15,8 @@ describe('GitHubUser', () => {
     const result = new GitHubUser(input);
 
     // then
-    assert.equal(result.img, givenUrl);
-    assert.equal(result.bio, givenBio);
+    assert.strictEqual(result.img, givenUrl);
+    assert.strictEqual(result.bio, givenBio);
   });
 
   it('should return bio when calling toString', () => {
@@ -31,6 +31,6 @@ describe('GitHubUser', () => {
     const result = new GitHubUser(input);
 
     // then
-    assert.equal(`${result}`, givenBio);
+    assert.strictEqual(`${result}`, givenBio);
   });
 });

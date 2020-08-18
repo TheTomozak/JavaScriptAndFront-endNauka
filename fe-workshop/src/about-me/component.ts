@@ -4,7 +4,7 @@ const ME_ATTR = 'me';
 
 export class AboutMe extends HTMLElement {
   // noinspection JSUnusedGlobalSymbols
-  static get observedAttributes() {
+  static get observedAttributes(): string []{
     return [ME_ATTR];
   }
 
@@ -13,13 +13,13 @@ export class AboutMe extends HTMLElement {
   }
 
   // noinspection JSUnusedGlobalSymbols
-  attributeChangedCallback(name, oldValue, newValue) {
+  attributeChangedCallback(name: string, oldValue: any, newValue: any) {
     if (name === ME_ATTR && oldValue !== newValue) {
       this.render(newValue);
     }
   }
 
-  async render(me) {
+  async render(me: string): Promise<void> {
     const user = await getUser(me);
     this.innerHTML = `
       <img src="${user.img}">

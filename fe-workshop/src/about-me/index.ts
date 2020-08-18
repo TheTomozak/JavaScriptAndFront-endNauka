@@ -1,3 +1,3 @@
 import { AboutMe } from './component';
 
-export default () => customElements.define('about-me', AboutMe);
+export default() : void => customElements.define('about-me', AboutMe);

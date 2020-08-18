@@ -1,6 +1,6 @@
 import { GitHubUser } from './model';
 
-export async function getUser(name) {
+export async function getUser(name: string) {
   try {
     const resp = await fetch(`https://api.github.com/users/${name}`);
     return new GitHubUser(await resp.json());

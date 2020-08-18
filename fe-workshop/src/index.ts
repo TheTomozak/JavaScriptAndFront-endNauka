@@ -1,3 +1,3 @@
-import initAboutMe from './about-me';
+import initAboutMe from './about-me/index';
 
 initAboutMe();
