@@ -1,0 +1,13 @@
+CSS:
+
+Do tego Sass i inne są dla CSS-a czymś, czym TS jest dla JS-a
+
+Jeżeli np jest border 50%; to oznacz że góra dół lewa prawa ustawaimi na 50%
+		
+		np. margin: 0 auto; = 
+				margin-top: 0px;
+				margin-right: auto;
+				margin-bottom: 0px;
+				margin-left: auto;
+	
+	FLEXBOX: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
