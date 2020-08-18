@@ -1,0 +1,107 @@
+TypeScript:
+
+{
+	-Język będący nadzbiorem JavaScripta
+		*Taki Groovy, tylko Groovy dodaje Javie dynamiczne typowanie
+		*TypeScript dodaje statyczne typowanie JS-owi
+	-TS to również zbiór definicji (typowań) większości znanych bibliotek
+		*Nowoczesne IDE korzystają z tych definicji
+	-Kompilowanie TS-a do JS-a wychwytuje sporo błędów (JS - dopiero w przeglądarce)
+
+
+	DEKLAROWANIE TS:
+	-Składnia "kotlinowa": let zmienna: typ
+	-Zmienna raz zdefiniowana jako string nie może przyjąć niczego innego
+	-Wyjątek? Typ any
+	-Działa type inference
+	-Jeśli tylko zadeklarujemy zmienną (nie podamy wartości), dostaniemy typ any
+	
+		Przykłady:
+				===	let obj: { foo: string, bar: number };
+					obj = {
+						foo: 'test',
+						bar: true // już nie można
+					}
+				=== let num = 7;
+					num = 'abc'; //błąd 
+					
+					let sth;
+					sth = 77;	//to będzie ok 
+					sth = 'txt';	//i to też 
+					
+				
+	INTERFEJSY w TS:
+	-Informacja o typach, wyłącznie w TypeScript'cie
+		*Zupełnie ignorowane w kodzie wynikowym
+	-Współpracują z importami i exportami
+	-Zalecenia TS: nazwę rozpoczynać od I
+	-mogą zawierać nie tylko metody, ale i pola, wymagające "implementacji"
+
+	Tak jak interface istnieje tylko w TS, tak też:
+	-[key: string]: any - oznaczenie, że w obiekcie będą "dynamiczne" składowe
+	-pole? - pole niewymagane (opcjonalna implementacja, ale typy muszą się zgadzać)
+	-readonly - pole tylko do odczytu (jak const dla zmiennych lokalnych)
+	-private, public - różny dostęp do składowych
+	-Można jak w Kotlinie - definiować dostępy od razu w konstruktorze
+
+		Przykłady:
+			===interface IFullName{
+				name: string;
+				surname: string;
+				}
+				
+				interface IPerson{
+				fullname: IFullName;
+				introduce(): void;
+				}
+				
+				class FullName implements IFullName {	//możemy implementwac ile chcemy
+					name: string;
+					surname: string;
+					
+					constructor({name, surname} : IFullName){
+						this.name = name;
+						this.surname = surname;
+					}
+					
+					toString(){
+					return `${this.name} ${this.surname}`;
+					}
+					
+				class Person implements IPerson{
+					fullname: FullName;
+					
+					constructor (fullName: {name: string, surname: string, [key: string]: any}){ //[key: string]: any dzięki tamu mogą być inne klucze o byle jakim typie 
+						this.fullName = new FullName(fullName);
+						
+						introduce(): void{
+							alert(...)
+						}
+						
+				
+				Przykład:
+					interface IPerson{
+						name: string;
+						surname : string;
+						age?: number;
+					}
+					
+					class Person implements IPerson{
+						
+						constructor (public name:string, public surname:string){}
+						ZAMIAST	
+						public name: string ;
+						constructor ( name:string, public surname:string){
+							this.name = name;
+						}
+						
+						
+
+						
+				
+		
+	
+
+
+
+}
