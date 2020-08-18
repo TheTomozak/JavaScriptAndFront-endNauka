@@ -95,7 +95,30 @@ TypeScript:
 							this.name = name;
 						}
 						
-						
+}					
+
+				UNIE W TS:
+				-Możliwe przypisanie jednego z wielu typów
+				-Specyficzne przypadki:
+						type | null
+						type | undefined
+				-Tak jak w Kotlinie - upewnienie się o typie, udostępnia wszystkie jego metody
+				-Można pisać własne "upewniacze"
+				
+				Przykład:
+				type NameOrNamesArray = string | string [];
+				
+				function createName(name: NameOrNamesArray){
+					alsert (name.length);		//teraz mamy metody w spólne dla stringa i tablivy 
+					if(typeof name === 'string'){
+						return name;
+					}
+					return name.join(' ');		//po sprawdzeniu że jest to tablica mamy metody dla tablciy
+				}
+				
+					
+					
+
 
 						
 				
@@ -104,4 +127,3 @@ TypeScript:
 
 
 
-}
