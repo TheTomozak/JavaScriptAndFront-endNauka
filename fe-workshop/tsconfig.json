@@ -3,7 +3,9 @@
     "module": "esnext",
     "target": "esnext",
     "alwaysStrict": true,
-    "declaration": true
+    "declaration": true,
+    "jsx": "react",
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*"

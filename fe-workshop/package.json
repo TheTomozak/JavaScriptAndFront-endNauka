@@ -2,7 +2,7 @@
   "name": "fe-workshop",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack",
@@ -23,5 +23,11 @@
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.10",
     "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.46",
+    "@types/react-dom": "^16.9.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
