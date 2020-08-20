@@ -11,12 +11,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html'
     })
+
   ],
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
+
       }
     ]
   },
