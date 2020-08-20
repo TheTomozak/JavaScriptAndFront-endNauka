@@ -1,10 +1,10 @@
-import { getUser } from '../github/service';
+import {getUser} from '../github/service';
 
 const ME_ATTR = 'me';
 
 export class AboutMe extends HTMLElement {
   // noinspection JSUnusedGlobalSymbols
-  static get observedAttributes(): string []{
+  static get observedAttributes(): string[] {
     return [ME_ATTR];
   }
 
@@ -13,7 +13,7 @@ export class AboutMe extends HTMLElement {
   }
 
   // noinspection JSUnusedGlobalSymbols
-  attributeChangedCallback(name: string, oldValue: any, newValue: any) {
+  attributeChangedCallback(name: string, oldValue: any, newValue: any): void {
     if (name === ME_ATTR && oldValue !== newValue) {
       this.render(newValue);
     }
@@ -22,7 +22,7 @@ export class AboutMe extends HTMLElement {
   async render(me: string): Promise<void> {
     const user = await getUser(me);
     this.innerHTML = `
-      <img src="${user.img}">
+      <img src="${user.img}" alt="photo" />
       <p>${user.bio}</p>
     `;
   }

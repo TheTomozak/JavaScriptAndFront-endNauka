@@ -2,13 +2,25 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import initAboutMe from './about-me/index';
+import {Repos} from "./github/react-component";
 
 
 initAboutMe();
 
+declare global {
+    namespace JSX {
+        // noinspection JSUnusedGlobalSymbols
+        interface IntrinsicElements {
+            'about-me': { me: string }
+        }
+    }
+}
 
-
+const user = 'TheTomozak';
 ReactDOM.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('repos')
+    <>
+        <about-me me={user} />
+        <Repos user={user} />
+    </>,
+    document.getElementById('app')
 );
